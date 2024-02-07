@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="header">
+
+        <div class="container">
+            <nav>
+                <img src="Images/Logo.JPG" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">Skills</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <img src="Images/profile1.png" class="image">
+            </div>
+            <div class="header-text">
+
+                <h1>Hi, I'm <span> Abu Afeef</span><br> From Nagercoil</h1>
+                <p>Web Developer</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- ----------------About------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutcol-01">
+                    <img src="Images/profile2.png" alt="">
+                </div>
+                <div class="aboutcol-02">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hi there! I'm Abu Afeef S a budding Web developer excited to embark on this digital journey.
+                        Fresh out of Mohammed Sathak Engineering College, I bring enthusiasm and a hunger to learn.
+                        Proficient in HTML,CSS,JS and Java, I'm eager to contribute to innovative projects and grow
+                        alongside experienced professionals. Feel free to adjust it to better fit your personal
+                        experiences and aspirations!
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span><br>Hypertext MarkUp Language</li>
+                            <li><span>CSS</span><br>Cascading Style Sheet</li>
+                            <li><span>JS</span><br>Java Script</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>B.E from MSEC at Kilakarai </li>
+                            <li><span>2019</span><br>HSC from AMHSS at Nagercoil</li>
+                            <li><span>2017</span><br>SSLC from AMHSS at Nagercoil</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ----------------Services------------------ -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-brands fa-youtube"></i>
+                    <h2 class="youtube">Youtube Clone UI </h2>
+                    <p>"I designed and developed a user interface inspired by YouTube as a personal project. This
+                        project involved creating a clone of the YouTube interface, focusing on replicating key design
+                        elements and user experience features. Through this endeavor, I honed my skills in Design
+                        skills,
+                        frontend development, and user experience optimization."</p>
+
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2 class="port">Portfolio Website</h2>
+                    <p>My portfolio website is a dynamic representation of my skills, projects, and professional
+                        journey.Designed and developed with meticulous attention to detail, it serves as a comprehensive
+                        showcase of my capabilities in design and development. With a focus on user experience and visual appeal, my
+                        portfolio website embodies my dedication to excellence in digital craftsmanship and serves as a
+                        gateway to my professional portfolio." </p>
+
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i>abuafeef1221@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i>9360713958</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                    <a href="AbuAfeef.pdf" download class="button">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text"name="Name" placeholder="Your Name" required>
+                        <input type="email"name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="Submit" class="button">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+            <div class="copyright">
+                <p>CopyRight <i class="fa-regular fa-copyright"></i> Afeef Portfolio Website<i class="fa-solid fa-heart"></i> </p>
+            </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
